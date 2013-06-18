@@ -1,0 +1,22 @@
+{% extends "common/base.html" %}
+{% block content %}
+
+this is pythonweb
+<input id='button' type='BUTTON' name='button' value="button"/>
+
+{% end %}
+{% block script%}
+<script>
+  $(function(){
+    $('#button').click(function(){
+      $.ajax({
+        type:'POST',
+        data:{id:'[{"name":"xfmo","pwd":"xfmo"},{"name":"courade","pwd":"courade"}]'},
+        url:'/',
+        success:function(data){
+        }
+      })
+    })
+  })
+  </script>
+{% end%}
